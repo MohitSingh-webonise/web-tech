@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>WELCOME TO THE WEBONISE</title>
+
+	<script type="text/javascript">
+
+		function abc()
+		{
+			window.addEventListener("contextmenu", function (ab)
+				{
+					ab.preventDefault();
+					
+				
+				    var dynDiv = document.createElement("div");
+					dynDiv.id = "divDyna";
+					dynDiv.innerHTML = <ul>
+							<li><a href="#">Back...</a></li>
+							<li><a href="#">Reload...</a></li>
+							<li><a href="#">Forward...</a></li>
+							<li><a href="#">Get Link...</a></li>
+							<li><a href="#">Veiw page source...</a></li>
+							<li><a href="#">View page info...</a></li>
+							<li><a href="#">Select All...</a></li>
+							<li><a href="#">Book mark this page...</a></li>
+							</ul>;
+					dynDiv.style.height = "200px";
+					dynDiv.style.width = "200px";
+
+					dynDiv.style.display="block";
+					dynDiv.style.position="absolute";
+					dynDiv.style.left=ab.pageX-40;
+					dynDiv.style.top=ab.pageY-15;
+					dynDiv.style.backgroundColor = 'gray';
+					document.getElementById("myDive").innerHTML='';
+					document.getElementById("myDive").appendChild(dynDiv);
+					
+					
+				},false)
+				return false;
+		}
+			
+
+	</script>
+</head>
+
+	<body onload="abc()">
+			<dive id="myDive" syle="none" ></dive>
+
+
+		<form name="test1" id="test1" method="get">
+		<h2 align="center">FILLUP THE DETAILS </h2>
+			<table align="center">
+				<tr>
+					<th align="right">EmailID:</th>
+					<td><input type="text" name="emailid" id="emailid" /></td>
+				</tr>
+				<tr>
+					<th align="right">First name:</th>
+					<td><input type="text" name="fname" id="fname" /></td>
+				</tr>
+				<tr>
+					<th align="right">Last name:</th>
+					<td><input type="text" name="lname" id="lname"  /></td>
+
+				</tr>
+				<tr>
+					<th align="right">Password </th>
+					<td><input type="text" name="pass" id="pass" /></td>
+
+				</tr>
+				<tr>
+					<th align="right">Mobile NO:</th>
+					<td><input type="text" name="mob" id="mob" /></td>
+
+				</tr>
+				<tr>
+					<td align="right"><input type="submit" name="submit" id="submit" value="Submit"  /></td>
+					<td><input type="reset" name="reset" id="reset" value="Reset" /></td>
+				</tr>
+
+	
+			</table>
+		
+
+           	</form>
+
+	</body>
+
+
+</html>

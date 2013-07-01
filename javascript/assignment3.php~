@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>WELCOME TO THE WEBONISE</title>
+	<script type="text/javascript">
+	function()
+	{
+		var xmlhttp;
+		if(window.XMLHttpRequest)
+		{
+			xmlhttp=new XMLHttpRequest();
+		}
+		else
+		{
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+			xmlhttp.open("GET","assignment3.php",true);
+			xmlhttp.send();
+		
+
+			xmlhttp.onreadystatechange=function()
+			  {
+				  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				    {
+				  	 // document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+						alert(xmlhttp.responseText);
+				    }
+			  } 
+	
+	}
+			
+
+	</script>
+</head>
+
+	<body>
+		<form name="test1" id="test1" method="get">
+		<h2 align="center">FILLUP THE DETAILS </h2>
+			<table align="center">
+				<tr>
+					<th align="right">Enter emailID:</th>
+					<td><input type="text" name="emailid" id="emailid" /></td>
+				</tr>
+				<tr>
+					<th align="right">First name:</th>
+					<td><input type="text" name="fname" id="fname" /></td>
+				</tr>
+				<tr>
+					<th align="right">Last name:</th>
+					<td><input type="text" name="lname" id="lname"  /></td>
+
+				</tr>
+				<tr>
+					<th align="right">Enter the password </th>
+					<td><input type="text" name="pass" id="pass" /></td>
+
+				</tr>
+				<tr>
+					<th align="right">Enter your mobile NO:</th>
+					<td><input type="text" name="mob" id="mob" /></td>
+
+				</tr>
+				<tr>
+					<td align="right"><input type="submit" name="submit" id="submit" value="Submit" onclick=abc(); /></td>
+					<td><input type="reset" name="reset" id="reset" value="Reset" /></td>
+				</tr>
+
+	
+			</table>
+		
+
+           	</form>
+
+	</body>
+
+
+</html>

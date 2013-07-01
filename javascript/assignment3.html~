@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>WELCOME TO THE WEBONISE - 1234</title>
+	<script type="text/javascript">
+	   /* function getXhrObject() {  
+		var xhrObject = false;  
+		// Most browsers (including IE7) use the 3 lines below  
+		if (window.XMLHttpRequest) {  
+		    xhrObject = new XMLHttpRequest();  
+		}  
+		// Internet Explorer 5/6 will use one of the following  
+		else if (window.ActiveXObject) {  
+		    try {  
+		    xhrObject = new ActiveXObject("Msxml2.XMLHTTP");  
+		        } catch(err) {  
+		            try {  
+		            xhrObject = new ActiveXObject("Microsoft.XMLHTTP");  
+		            } catch(err) {  
+		            xhrObject = false;  
+		            }  
+		    }  
+		}  
+		return xhrObject;  
+	    }  */
+	function abc()
+	{
+		
+		var xmlhttp;
+		xmlhttp = getXhrObject();
+		alert (xmlhttp);
+
+		xmlhttp.open("GET","http://localhost/assignment4.php",true);
+		xmlhttp.send();
+		alert("hi1");
+
+		xmlhttp.onreadystatechange = function(){	alert('hi2');				
+				  if (xmlhttp.readyState == 4 && xmlhttp.status==200){
+				  	 document.getElementById("paper").innerHTML=xmlhttp.responseText;					 
+				    }
+			  }
+		return false;	
+	}
+	</script>
+</head>
+
+	<body>
+		<form name="test1" id="test1" method="GET" ><!--action="assignment3.php" -->
+		<h2 align="center">FILLUP THE DETAILS </h2>
+			<table align="center">
+				<tr>
+					<th align="right">Enter emailID:</th>
+					<td><input type="text" name="emailid" id="emailid" /></td>
+				</tr>
+				<tr>
+					<th align="right">First name:</th>
+					<td><input type="text" name="fname" id="fname" /></td>
+				</tr>
+				<tr>
+					<th align="right">Last name:</th>
+					<td><input type="text" name="lname" id="lname"  /></td>
+
+				</tr>
+				<tr>
+					<th align="right">Enter the password </th>
+					<td><input type="password" name="pass" id="pass" /></td>
+
+				</tr>
+				<tr>
+					<th align="right">Enter your mobile NO:</th>
+					<td><input type="text" name="mob" id="mob" /></td>
+
+				</tr>
+				<tr>
+					<td align="right">
+						<input type="button" name="submit" id="submit" value="Submit" onclick=abc(); />
+					</td>
+					<td><input type="reset" name="reset" id="reset" value="Reset" /></td>
+					<td><span id="paper"></span></td>
+				</tr>
+
+	
+			</table>
+		
+
+           	</form>
+		
+
+	</body>
+</html>

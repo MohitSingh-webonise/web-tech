@@ -1,0 +1,24 @@
+<html>
+<head>
+ <script src="myScript.js"></script> 
+<link rel="stylesheet" type="text/css" href="pageStyle.css">
+
+<title>Welcome to the memory game.</title>
+</head>
+
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>
+					Enter Numer of row<input type="text" id='row' name='row' />
+							  <input type="button" id='submit' name='submit' value='submit' onclick="createTable()"; />
+				</td>
+			</tr>
+		</table>
+		<div id='tab' style="none"></div>
+    	</form>
+
+
+</body>
+</html>

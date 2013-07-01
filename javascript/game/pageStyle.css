@@ -1,0 +1,17 @@
+.colcs
+{
+height:50px;
+width:50px;
+background-color:grey;
+}
+
+.tabdeg
+{
+height:400px;
+width:400px;
+border:5px;
+position:absolute;
+top:100px;
+left:600px;
+background-color:green;
+}
